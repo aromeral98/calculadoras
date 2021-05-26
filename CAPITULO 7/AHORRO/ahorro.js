@@ -102,12 +102,13 @@ if (
     navigator.userAgent
   )
 ) {
-  const calculadora = document.getElementById("Cuadroprincipal");
-  const fondo = document.getElementById("fondo");
-  const body = document.getElementById("body");
-  calculadora.classList.remove("bg-text");
-  calculadora.classList.add("movil");
-  calculadora.classList.add("container");
-  fondo.classList.remove("bg-image");
-  body.classList.add("movil-fondo");
+    const calculadora = document.getElementById("Cuadroprincipal");
+    const fondo = document.getElementById("fondo");
+    const body = document.getElementById("body");
+    calculadora.classList.remove("bg-text");
+    // TODO: No meter nunca clases por js
+    // calculadora.classList.add("movil");
+    // calculadora.classList.add("container");
+    fondo.classList.remove("bg-image");
+    body.classList.add("movil-fondo");
 }

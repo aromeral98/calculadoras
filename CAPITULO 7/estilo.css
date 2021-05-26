@@ -124,3 +124,10 @@ body, html {
 	background-size: cover;
 	
 }
+
+@media (min-width: 720px) {
+	/* TODO: Meter aquí el css nuevo */
+	.bg-text {
+		font-size: 3rem;
+	}
+}
