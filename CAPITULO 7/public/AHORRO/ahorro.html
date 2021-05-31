@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./../estilo.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <title>
+      Calculadora de ahorro
+    </title>
+    <meta lang="ES" />
+    <script type="text/javascript">
+      function pulsar(e) {
+        if (e.keyCode === 13 && !e.shiftKey) {
+          calcular();
+        }
+      }
+    </script>
+  </head>
+  <body >
+    <div class="informativo informativo-responsive" style="margin-top: 10px;">
+      Los calculos son realizados en base a un patron de ahorro del dinero
+      recomendado por expertos
+    </div>
+   
+    <div  class="bg-image"></div>
+
+    <div class="bg-text texto-responsive" >
+      <h1>Calculadora de ahorro</h1>
+      <div class="form-group">
+        <div class="form-label" onkeypress="pulsar(event)">
+          Ingreso obtenido: <br /><input 
+            
+            type="text"
+            autocomplete="off"
+            id="importe"
+          />
+
+          <div class="slidecontainer">
+            <input
+              type="range"
+              min="1"
+              max="100"
+              value="30"
+              class="slider"
+              id="porcentajeahorro"
+            />
+            <p>Porcentaje destinado a ahorro: <span id="demo">%</span></p>
+          </div>
+          <div class="slidecontainer">
+            <input
+              type="range"
+              min="1"
+              max="100"
+              value="20"
+              class="slider"
+              id="porcentajeinversion"
+            />
+            <p>Porcentaje destinado a inversion: <span id="demo1">%</span></p>
+          </div>
+          <div class="slidecontainer">
+            <input
+              type="range"
+              min="1"
+              max="100"
+              value="50"
+              class="slider"
+              id="porcentajegastos"
+            />
+            <p>Porcentaje destinado a gastos: <span id="demo2">%</span></p>
+          </div>
+        </div>
+      </div>
+      <div>Importe introducido : <span id="introducido"></span></div>
+      <div>Importe destinado a ahorro : <span id="ahorro"></span></div>
+      <div>Importe destinado a inversiones : <span id="inversion"></span></div>
+      <div>Importe restante para gastos : <span id="gasto"></span></div>
+      <button
+        id="calcular"
+        class="btn btn-primary"
+        type="button"
+        style="margin: 10px;width: 250px;"
+      >
+        Calcular</button
+      ><br />
+      <button
+        id="restablecer"
+        onclick="restablecer()"
+        class="btn btn-primary"
+        type="button"
+        style="margin: 10px;width: 250px;"
+      >
+        Restablecer valores
+      </button>
+      <div style="margin-top: 10px;"><span id="porcentajeexcedido"></span></div>
+    </div>
+    <div class="container"></div>
+    <script src="ahorro.js"></script>
+  </body>
+</html>
